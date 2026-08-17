@@ -1,21 +1,26 @@
-import './App.css'
-import { Button } from './Button.tsx'
+import { Button } from './Button'
+import { Product } from './Products'
 
+const textoBotoes = [
+    'Botao 1',
+    'Botao 2',
+    'Botao 3',
+    'Botao 4',
+    'Botao 5'
+]
 
 function App() {
     return (
         <div>
             <h1>Hello world</h1>
-            <h1>hello world</h1>
 
+            {textoBotoes.map((texto) => {
+                return <Button text={texto} />
+            })}
 
-            <Button/>
-            <Button/>
-            <Button/>
-            <Button/>
+            <Product />
         </div>
     )
 }
-
 
 export default App
